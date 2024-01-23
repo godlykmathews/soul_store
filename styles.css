@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(231, 231, 231);
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.905);
+}
+
+.navbar li{
+    padding: 20px;
+    display: inline-block;
+    justify-content: center;
+}
+
+
+.navbar a{
+    text-decoration: none;
+    color: rgba(222, 220, 220, 0.805);
+    font-family: 'Almarai' ,"sans-serif";
+}
+
+.seperator{
+    height:400px;
+    width: 100%;
+}
+
+.box{
+    height: 150px;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.905);
+}
