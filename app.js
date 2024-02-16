@@ -4,7 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs = require('express-handlebars');
-var indexRouter = require('./routes/index');
+var fileUpload = require('express-fileupload');
+const db = require('./config/connection');
+var session = require('express-session');
+var usersRouter = require('./routes/user');
+var adminRouter = require('./routes/admin');
 
 var app = express();
 // view engine setup
@@ -16,8 +20,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', indexRouter);
+app.use(fileUpload());
+app.use(session({secret:"Key",cookie:{maxAge:600000}}))
+db.connect((err)=>{
+  if(err) console.log("Connection error",err)
+  else console.log("Database Connected")
+})
 
+app.use('/', usersRouter);
+app.use('/admin', adminRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
