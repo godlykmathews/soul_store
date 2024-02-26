@@ -1,0 +1,91 @@
+ <!-- ***** Footer Start ***** -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="first-item">
+            <div class="logo">
+                <p style="color: aliceblue; font-size:45px">U Cart</p>
+            </div>
+            <ul>
+              <li><a href="#">Pathanamthitta, Kerala , India</a></li>
+              <li><a href="mailto:udhaykrishna06@gmail.com">udhaykrishna06@gmail.com</a></li>
+              <li><a href="tel:+919778568601">+91 9778568601</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h4>Shopping &amp; Categories</h4>
+          <ul>
+            <li><a href="/men">Men’s Shopping</a></li>
+            <li><a href="/women">Women’s Shopping</a></li>
+            <li><a href="/accessories">Accessories Shopping</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Help</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h4>Help &amp; Information</h4>
+          <ul>
+            <li><a href="tel:+919778568601">Help</a></li>
+            <li><a href="tel:+919778568601">FAQ's</a></li>
+            <li><a href="tel:+919778568601">Shipping</a></li>
+            <li><a href="tel:+919778568601">Tracking ID</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <div class="under-footer">
+            <p>Copyright © 2024 U Cart, All Rights Reserved. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- jQuery -->
+  <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/accordions.js"></script>
+  <script src="assets/js/datepicker.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imgfix.min.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/isotope.js"></script>
+
+  <!-- Global Init -->
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+
+    $(function () {
+      var selectedClass = "";
+      $("p").click(function () {
+        selectedClass = $(this).attr("data-rel");
+        $("#portfolio").fadeTo(50, 0.1);
+        $("#portfolio div").not("." + selectedClass).fadeOut();
+        setTimeout(function () {
+          $("." + selectedClass).fadeIn();
+          $("#portfolio").fadeTo(50, 1);
+        }, 500);
+
+      });
+    });
+
+  </script>
